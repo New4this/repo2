@@ -1,0 +1,89 @@
+
+div#container 
+{
+  display:block;
+  position: relative;
+  min-height:  1000px;
+  width:  1000px;
+  margin: 0 auto;
+  padding: 0 auto;
+  background: #40E0D0;
+  text-align: center;
+}
+
+div#container2 {
+    height: 100px;
+    width: 600px;
+    position: relative;
+    background: url(broadwoods_folley.jpg) no-repeat top center;
+    margin: 0 auto;
+    padding: 80px;
+    text-decoration: underline;
+    color: black(255,0,0);
+}
+
+img { 
+  width: 45%; /* Scale down */
+  margin: 22px 0;  
+  vertical-align: center;
+  box-shadow: 3px 3px 7px #777;  
+}
+
+
+
+header#header_page
+{
+    background-color: #008080;
+    text-align: center;
+    color: #ffffff;
+    padding: 10px; 15px;
+}
+
+nav#header_section
+{
+  float: right;
+  font-size: 1em;
+  background-color: gray;
+}
+
+nav#main_nav
+ul {
+text-align: center;
+}
+
+li {
+  display: inline-block;
+  margin: 0 2px;
+  padding: 4px 6px;
+  font-size: 1.5em;
+  background: #888;
+  -moz-border-radius: 2px;
+  -webkit-border-radius: 2px;
+  -moz-box-shadow: 0 1px 3px rgba(0,0,0,0.6);
+  -webkit-box-shadow: 0 1px 3px rgba(0,0,0,0.6);
+  text-shadow: 0 -1px 1px rgba(0,0,0,0.25);
+  border-bottom: 1px solid rgba(0,0,0,0.25);
+  position: relative;
+  cursor: pointer;
+  color: black;
+
+  a,
+  a:link,
+  a:visited {
+  color: #fff;
+  text-decoration:none;
+  }
+
+footer
+{
+  background-color: #2E8B57;
+  text-align: center;
+  color: #ffffff;
+  padding: 5px;
+  clear: left;
+}
+
+
+
+
+  

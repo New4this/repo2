@@ -1,0 +1,8 @@
+<h2>Admin Interface</h2>
+
+<% if admin_signed_in? %>
+		    Signed in as <%= current_user.email %>: "rk00112@surrey.ac.uk" 
+		    <%= link_to "Sign out", destroy_user_session_path, :method => :delete %>
+		    <% else %>
+            <%= link_to "sign in", new_user_session_path %>
+		<% end %>

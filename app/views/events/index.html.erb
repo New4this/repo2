@@ -1,0 +1,61 @@
+<h1>Listing events</h1>
+<article>
+  <h1>Natural History Related Events in Mole Valley</h1>
+  <p>
+    <%= image_tag "butterflies/Adonis-Blue-face.jpg", :class => 'butterfliesLeft',
+                    :title => 'Adonis Blue face on. Copyright: Jeremy Early', :alt => "Adonis Blue butterfly face on" %>
+  </p>
+  <p>
+    Mole Valley has a lively and active community of natural history enthusiasts. There are events
+    that suite all levels of experience. We provide here some links that will keep you up to date
+    with natural history related activities in Mole Valley.
+  </p>
+  <p>
+    The RSPB Dorking and District Local Group organise regular events throughout the year that are
+    open to all. You do not need to be an expert birdwatcher. Indeed you will find many are ideal
+    for those that are wanting to get started. An up to date programme of events can be found
+    <%= link_to("here", "http://www.rspb.org.uk/groups/dorkinganddistrict/events/", {:target => "_blank"}) %>.
+  </p>
+  <section class="clearfix">
+  <%= image_tag "Adders-dancing.jpg", :class => 'butterfliesRight',
+                    :title => 'Male Adders dancing. Copyright: Jeremy Early', :alt => "Male Adders dancing" %>
+  <p>
+    Amphibians and Reptiles are important indicators of habitat quality. The Surrey Amphibian and Reptile
+    Group is an extremely active and enthusiastic group that provides important support for some of our
+    most threatened habitats. An up to date list of their events can be found
+    <%= link_to("here", "http://surrey-arg.org.uk/SARG/30000-CommitteeTools/calendar/SARGcalendar.asp", {:target => "_blank"}) %>.
+  </p>
+  </section>
+</article>
+
+<table>
+  <tr>
+    <th>Title</th>
+    <th>Date</th>
+    <th></th>
+    <th>Description</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+
+ <tr>
+  <td><% @events.each do |event| %>
+ <% form_tag events_path, :method => 'get' do %>
+ <%= text_field_tag :search, params[:search] %>
+    <%= submit_tag "Search", :name => nil %><% end %></td>
+    <td><%= event.title %></td>
+    <td><%= event.date %></td>
+    <td><%= event.description %></td>
+    <td><button><%= link_to 'Show', event %></button></td>
+    <td><button><%= link_to 'Edit', edit_event_path(event) %></button></td>
+    <td><button><%= link_to 'Destroy', event, method: :delete, data: { confirm: 'Are you sure?' } %></button>
+     </td>
+  </tr>
+  <% end %>
+</table>
+<br />
+<nav id= "header_sectiontoo">
+</nav>
+<button><%= link_to 'New Event', new_event_path %></button>

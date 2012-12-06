@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <label><b>Event:</b></label>
+  <%= @comment.event_id %>
+</p>
+
+<p>
+  <label><b>Details:</b></label>
+  <%= @comment.details %>
+</p>
+
+<p>
+  <label><b>Author:</b></label>
+  <%= @comment.author %>
+</p>
+
+
+<button><%= link_to 'Edit', edit_comment_path(@comment) %></button> |
+<button><%= link_to 'Back', comments_path %></button>
